@@ -33,6 +33,8 @@ def parse_tu(
         args.append("--target=x86_64-pc-windows-msvc")
         args.append("-fms-compatibility")
         args.append("-fms-extensions")
+    elif target_platform == "OSX":
+        args.append("--target=x86_64-apple-darwin")
 
     if prefix:
         args.append(f"--sysroot={prefix}")
