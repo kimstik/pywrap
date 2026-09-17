@@ -865,7 +865,7 @@ def render(
 
         # split collection registration into multiple TUs due to OOM
         N_coll = len(sorted_collections)
-        coll_chunk_size = 100
+        coll_chunk_size = 25
         N_chunks = ceil(N_coll / coll_chunk_size)
 
         for i in range(N_chunks):
